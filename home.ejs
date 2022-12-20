@@ -1,0 +1,9 @@
+<%- include('partials/header'); -%>
+<!-- TO render the header and footer files we use html partials -->
+<h1><%= homeText %> </h1>
+<p><%= HomeStarting %></p>
+<% for(var i=0;i<listItem.length;i++) { %>
+    <h3><%= listItem[i].title %></h3>
+    <p><%= listItem[i].content.substr(0,100)+" ......" %> <a href="posts/<%= listItem[i].title %>" >Read More</a> </p>
+<% }%>
+<%- include('partials/footer'); -%>
